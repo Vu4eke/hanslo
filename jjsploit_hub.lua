@@ -5,7 +5,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 -- Основа
 
-local Window = OrionLib:MakeWindow({Name = "JJSploit hub", HidePremium = false, SaveConfig = true, ConfigFolder = "jj_hubs"})
+local Window = OrionLib:MakeWindow({Name = "JJSploit hub", HidePremium = false, SaveConfig = false, ConfigFolder = "jj_hubs", IntroText = "Welcome to hub!"})
 
 -- Уведомление 
 
@@ -46,6 +46,17 @@ Tab:AddButton({
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = " "
+})
+
+Tab:AddButton({
+	Name = "Выключить скрипт",
+	Callback = function()
+		OrionLib:Destroy()
+  	end    
+})
+
 -- Страница "Blox Fruit"
 
 local Tab = Window:MakeTab({
@@ -56,59 +67,10 @@ local Tab = Window:MakeTab({
 
 Tab:AddLabel("Время сервера: None")
 Tab:AddButton({
-    Name = "Blox Fruit Dealer",
+    Name = "TNG HUB",
     Callback = function()
-        print("ОТКРЫВАЮ ДИЛЕРА")
-        local function StartDialog(DialogName)
-            local ReplicatedStorage = game:GetService("ReplicatedStorage")
-            local DialogueController = require(ReplicatedStorage.DialogueController)
-            local DialoguesList = require(ReplicatedStorage.DialoguesList)
-
-            for Index,Dialog in pairs(DialoguesList) do
-                if Dialog.Name == DialogName then -- Сравниваем имя диалога
-                    DialogueController.Start(Dialog) -- Вызываем Start для экземпляра диалога
-                    break -- Выходим из цикла после запуска диалога
-                end
-            end
-        end
-
-        StartDialog("Blox Fruit Dealer")
+        print("Injecting TNG Hub....")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/tngaming123/TNGHub/main/ForPC.lua"))()
+		print("Injected!")
     end
-})
-Tab:AddButton({
-	Name = "Advanced Blox Fruit Dealer",
-	Callback = function()
-		print("ОТКРЫВАЮ МИРАЖ ДИЛЕРА")
-		local function StartDialog(DialogName)
-			local ReplicatedStorage = game:GetService("ReplicatedStorage")
-			local DialogueController = require(ReplicatedStorage.DialogueController)
-			local DialoguesList = require(ReplicatedStorage.DialoguesList)
-			
-			for Index,Dialog in pairs(DialoguesList) do
-			  if tostring(Index) == DialogName then
-				DialogueController.Start(DialogueController, Dialog)
-			  end
-			end
-		  end
-		  
-		  StartDialog("FruitShop2")
-		end    
-})
-Tab:AddButton({
-	Name = "Sanguine Art",
-	Callback = function()
-		local function StartDialog(DialogName)
-			local ReplicatedStorage = game:GetService("ReplicatedStorage")
-			local DialogueController = require(ReplicatedStorage.DialogueController)
-			local DialoguesList = require(ReplicatedStorage.DialoguesList)
-			
-			for Index,Dialog in pairs(DialoguesList) do
-			  if tostring(Index) == DialogName then
-				DialogueController.Start(DialogueController, Dialog)
-			  end
-			end
-		  end
-		  
-		  StartDialog("AngelQuest1") -- 1, 9
-  	end    
 })
