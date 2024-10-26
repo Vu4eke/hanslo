@@ -7897,8 +7897,7 @@ function library:CreateWindow(options, ...)
 		end
 		if options.Credit ~= false then
 			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				tickstamp = os.time
-				Text = "Time: ", tickstamp
+				Text = "Time: ", now
 			}}
 		elseif "Gee, thanks for your support." then
 		end
