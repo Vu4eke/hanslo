@@ -465,7 +465,7 @@ Library v0.36 [
 ]
 ]]
 local library = {
-	Version = "0.37",
+	Version = "0.01Alpha",
 	WorkspaceName = "Pepsi Lib",
 	flags = {},
 	signals = {},
@@ -475,7 +475,7 @@ local library = {
 	subs = {},
 	colored = {},
 	configuration = {
-		hideKeybind = shared.force_toggle_gui_keybind or Enum.KeyCode.RightShift,
+		hideKeybind = shared.force_toggle_gui_keybind or Enum.KeyCode.Insert,
 		smoothDragging = false,
 		easingStyle = Enum.EasingStyle.Quart,
 		easingDirection = Enum.EasingDirection.Out
