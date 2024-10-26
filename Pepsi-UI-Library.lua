@@ -475,7 +475,7 @@ local library = {
 	subs = {},
 	colored = {},
 	configuration = {
-		hideKeybind = shared.force_toggle_gui_keybind or Enum.KeyCode.Insert,
+		hideKeybind = shared.force_toggle_gui_keybind or Enum.KeyCode.RightShift,
 		smoothDragging = false,
 		easingStyle = Enum.EasingStyle.Quart,
 		easingDirection = Enum.EasingDirection.Out
@@ -7897,7 +7897,8 @@ function library:CreateWindow(options, ...)
 		end
 		if options.Credit ~= false then
 			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				Text = "Join my discord server "
+				tickstamp = os.time
+				Text = "Time: ", tickstamp
 			}}
 		elseif "Gee, thanks for your support." then
 		end
