@@ -466,7 +466,7 @@ Library v0.36 [
 ]]
 local library = {
 	Version = "0.01Alpha",
-	WorkspaceName = "Pepsi Lib",
+	WorkspaceName = "Hanslo",
 	flags = {},
 	signals = {},
 	objects = {},
