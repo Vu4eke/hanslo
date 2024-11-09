@@ -465,8 +465,8 @@ Library v0.36 [
 ]
 ]]
 local library = {
-	Version = "0.01Alpha",
-	WorkspaceName = "Hanslo",
+	Version = "0.37",
+	WorkspaceName = "Pepsi Lib",
 	flags = {},
 	signals = {},
 	objects = {},
@@ -7897,7 +7897,7 @@ function library:CreateWindow(options, ...)
 		end
 		if options.Credit ~= false then
 			daaata[1 + #daaata] = {"AddLabel", "__Designer.Label.Creator", detailssection, {
-				Text = "Last update: 26.10.2024"
+				Text = "Library by Pepsi#5229 "
 			}}
 		elseif "Gee, thanks for your support." then
 		end
